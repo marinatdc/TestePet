@@ -8,15 +8,26 @@
     "scheme": "testepet",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#71A8B6"
+        }, 
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.teste.testepet",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/adaptive-icon.png", 
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.teste.testepet"
     },
     "web": {
       "bundler": "metro",
@@ -25,18 +36,22 @@
     },
     "plugins": [
       "expo-router",
+      "expo-font",
       [
-        "expo-splash-screen",
+        "@react-native-google-signin/google-signin",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "iosUrlScheme": "com.googleusercontent.apps.927970885497-jppsbkhkn0n76ido8ojkqv7ojebrjunt"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "336b9312-d45a-4f73-882c-6bc70ac63ea2"
+      }
     }
   }
 }
